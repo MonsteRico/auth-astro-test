@@ -1,0 +1,14 @@
+---
+---
+<html>
+<body>
+  <button id="login">Login</button>
+  <button id="logout">Logout</button>
+
+  <script>
+    const { signIn, signOut } = await import("auth-astro/client")
+    document.querySelector("#login").onclick = () => signIn("email", {email:"boilermonster0530@yahoo.com"})
+    document.querySelector("#logout").onclick = () => signOut()
+  </script>
+</body>
+</html>
